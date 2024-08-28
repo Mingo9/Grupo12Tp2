@@ -1,20 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package grupo12tp2;
 
-/**
- *
- * @author Francisco
- */
+
 public class Grupo12Tp2 {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
-        // TODO code application logic here
+       RelojFit reloj1 = new RelojFit(); //Creamos un objeto de tipo RelojFit
+       Persona persona1 = new Persona("Emanuel", reloj1); //Creamos una persona asociada con el reloj fit 
+       
+       
+       //Usamos los metodos de RelojFit
+        RelojFit relojFit = (RelojFit) persona1.getReloj();
+        relojFit.cuentaPasos(5, 10);
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Pasos contados: " + relojFit.getPasos());
+        System.out.println("Frecuencia aleatoria: " + relojFit.frecuenciaAleatoria());
+        System.out.println(persona1); 
+        System.out.println("--------------------------------------------------------");
+        
+       
     }
     
 }

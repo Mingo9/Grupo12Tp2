@@ -1,40 +1,35 @@
-
 package grupo12tp2;
-
 import java.time.LocalDate;
 import java.util.Scanner;
 
+   public class Reloj {
+     //Atributo   
+     private LocalDate fecha;
 
-public class Reloj {
-    
-    private String dia;
-    private String hora;
-    private String modelo;
-    private long numSerie;
+     //Constructor
+     public Reloj() {
+        this.fecha = LocalDate.now();
+     }
 
-    public Reloj(String dia, String hora, String modelo, long numSerie) {
-        this.dia = dia;
-        this.hora = hora;
-        this.modelo = modelo;
-        this.numSerie = numSerie;
-    }
+     //Metodo get
+     public LocalDate getFecha() {
+        return fecha;
+     }
 
-    public String getDia() {
-        return dia;
-    }
+     //Metodo set
+     public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+     }
 
-    public String getHora() {
-        return hora;
-    }
-    
-    public void incrementarDia (long dias){
-        LocalDate fechaHoy = LocalDate.now();
-        System.out.println("ingrese dias a incrementar ");
-        Scanner leer = new Scanner(System.in);
-        dias = leer.nextInt();
-        System.out.println("La fecha con el incremento es: "+fechaHoy.plusDays(numSerie));
-    }
+     //Sobre Escribimos je
+     @Override
+     public String toString() {
+        return "Reloj{" +
+                    "fecha= " + fecha +
+                    '}';
+     }
+
+ }
     
     
-    
-}
+
